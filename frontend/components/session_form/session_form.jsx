@@ -20,7 +20,9 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        this.props.processForm(user).then(
+            this.props.history.push("/")
+        )
     }
 
     renderErrors() {
@@ -73,7 +75,7 @@ class SessionForm extends React.Component {
                         <br />
                         {display}
                         <br />
-                        <input className="session-submit" type="submit" value={this.props.formType} />
+                        <input className="session-submit" type="submit" value={this.props.formType} />                        
                     </div>
                 </form>
             </div>
