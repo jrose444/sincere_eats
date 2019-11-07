@@ -1,9 +1,62 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
 .the-navbar{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #30a2cc;
+    height: 60px;
+}
+
+.nav-bar-fields{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    left: -100px;
+}
+
+.greeting-container{
+    width: 150px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-bar-fields h3{
+    padding: 5px;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.recipes-tab{
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.recipes-dropdown{
+  display: none;
+  position: absolute;
+  background-color: #30a2cc;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.recipes-tab:hover .recipes-dropdown{
+    display: block;
+}
+
+.rest-image{
+    width: 20px;
+    height: 100%;
 }

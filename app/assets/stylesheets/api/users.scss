@@ -6,12 +6,12 @@
     margin: 0 auto;
 }
 
-.login-signup {
+.greeting-container {
     position: relative;
   display: inline-block;
 }
 
-.dropdown {
+.signup-header {
     display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -21,6 +21,6 @@
   z-index: 1;
 }
 
-.login-signup:hover .dropdown {
+.login-signup:hover .signup-header {
   display: flex;
 }

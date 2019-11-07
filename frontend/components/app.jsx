@@ -14,11 +14,57 @@ import {
 const App = () => (
     <div>
         <header className="the-navbar">
-        <h1 className="title">Sincere Eats</h1>
-        <GreetingContainer />
+        <h1 className="title">Sincere Eats
+        <img className="rest-image" src="/assets/restaurant.png"/>
+        </h1>
+            <div className="nav-bar-fields">
+                <div className="dropdown">
+                <h3 className="recipes-tab">Recipes
+                    <div className="recipes-dropdown">
+                        <h4>item</h4>
+                        <h4>another item</h4>
+                    </div>
+                </h3>
+                
+                </div>
+                <div className="dropdown">
+                    <h3 className="recipes-tab">How-Tos
+                    <div className="recipes-dropdown">
+                            <h4>How-Tos</h4>
+                        </div>
+                    </h3>
+                </div>
+                <div className="dropdown">
+                    <h3 className="recipes-tab">Dining Out
+                    <div className="recipes-dropdown">
+                            <h4>How-Tos</h4>
+                        </div>
+                    </h3>
+                </div>
+                <div className="dropdown">
+                    <h3 className="recipes-tab">Thanksgiving
+                    <div className="recipes-dropdown">
+                            <h4>How-Tos</h4>
+                        </div>
+                    </h3>
+                </div>
+                <div className="dropdown">
+                    <h3 className="recipes-tab">Saved Recipes
+                    <div className="recipes-dropdown">
+                            <h4>How-Tos</h4>
+                        </div>
+                    </h3>
+                </div>
+                <div className="greeting-container">
+                    < GreetingContainer  />
+                </div>
+            </div>
         </header>
-        <AuthRoute exact path="/login" component={LoginFormContainer} />
-        <AuthRoute exact path="/signup" component={SignupFormContainer} className="Signup-Header"/>
+                <div>
+                    <AuthRoute exact path="/login" component={LoginFormContainer} />
+                    {/* < signup_form_container /> */}
+                    <AuthRoute exact path="/signup" component={SignupFormContainer} className="Signup-Header"/>
+                </div>
         
     </div>
 );
