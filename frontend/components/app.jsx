@@ -14,11 +14,12 @@ import {
 const App = () => (
     <div>
         <header className="the-navbar">
-        <h1>Sincere Eats</h1>
+        <h1 className="title">Sincere Eats</h1>
         <GreetingContainer />
         </header>
         <AuthRoute exact path="/login" component={LoginFormContainer} />
-        <AuthRoute exact path="/signup" component={SignupFormContainer} />
+        <AuthRoute exact path="/signup" component={SignupFormContainer} className="Signup-Header"/>
+        
     </div>
 );
 
