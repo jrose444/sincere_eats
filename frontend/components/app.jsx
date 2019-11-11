@@ -12,6 +12,7 @@ import {
     Link,
     HashRouter
 } from 'react-router-dom';
+import PostContainer from './posts/post_container'
 
 const App = () => (
     <div>
@@ -67,6 +68,7 @@ const App = () => (
                     {/* < signup_form_container /> */}
                 </div>
         
+        <PostContainer />
     </div>
 );
 
