@@ -1,10 +1,10 @@
 import {connect} from 'react-redux'
-import Post from './post'
+import Posts from './posts'
 import { fetchPosts } from '../../actions/post_actions'
 
 const mapStateToProps = (state) => {
     return {
-        posts: state.entities.posts
+        posts: state.entities.posts //make into array
     }
 }
 
@@ -12,4 +12,4 @@ const mapDispatchToProps = dispatch => ({
     banana: () => dispatch(fetchPosts())
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Post)
+export default connect(mapStateToProps, mapDispatchToProps)(Posts)

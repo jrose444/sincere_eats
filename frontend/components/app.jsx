@@ -67,7 +67,6 @@ const App = () => (
                     <Modal />
                     {/* < signup_form_container /> */}
                 </div>
-        
         <PostContainer />
     </div>
 );

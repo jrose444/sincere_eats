@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'better_errors'
+gem "aws-sdk-s3"
 gem 'binding_of_caller'
 gem 'pry-rails'
 gem 'annotate'
