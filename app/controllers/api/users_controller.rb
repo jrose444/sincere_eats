@@ -6,7 +6,7 @@ class Api::UsersController < ApplicationController
       login(@user)
       render json: @user
     else
-      flash[:errors] = @user.errors.full_messages
+      render json: ['these are errors'], status: 404
     end
   end
 

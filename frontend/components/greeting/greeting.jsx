@@ -12,8 +12,8 @@ const Greeting = ({ currentUser, logout, openModal }) => {
         <nav className="login-signup">
             {/* <p className="dropdown">dropdown test</p> */}
             {/* <div> <SessionForm /> </div> */}
-            <button onClick={() => openModal('login')}>Real Login</button>
-            <button onClick={() => openModal('signup')}>Real SignUp</button>
+            <button className="user-button" onClick={() => openModal('login')}>Login</button>
+            <button className="user-button" onClick={() => openModal('signup')}>SignUp </button>
             {/* <Link to="/login" className="greeting-login">Login</Link> */}
             {/* &nbsp;or&nbsp; */}
         </nav>
@@ -21,7 +21,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
     const personalGreeting = () => (
         <hgroup className="header-group">
             <h2 className="header-name">Hi, {currentUser.username}!</h2>
-            <button className="header-button" onClick={logout}>Log Out</button>
+            <button className="header-button" onClick={logout}><Link to="/"> Log Out </Link></button>
         </hgroup>
     );
 

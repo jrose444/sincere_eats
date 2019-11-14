@@ -1,0 +1,30 @@
+.user-button{
+    border: 1px solid #30a2cc;
+    padding: 5px;
+    margin: 2px;
+    background-color: #efefef;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.user-button:hover{
+    background-color: rgb(176, 176, 247)
+}
+
+.welcome{
+    letter-spacing: 2px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.session-submit{
+    padding: 6px 20px;
+    border: 1px;
+}
+
+.login-input{
+    padding: 2px;
+    border: 1px;
+}

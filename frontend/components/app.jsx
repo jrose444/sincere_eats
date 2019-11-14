@@ -13,6 +13,7 @@ import {
     HashRouter
 } from 'react-router-dom';
 import PostContainer from './posts/post_container'
+import PostShowContainer from './posts/post_show_container'
 
 const App = () => (
     <div>
@@ -67,7 +68,8 @@ const App = () => (
                     <Modal />
                     {/* < signup_form_container /> */}
                 </div>
-        <PostContainer />
+        <Route exact path="/" component={PostContainer} />
+        < ProtectedRoute path="/posts/:mango" component={PostShowContainer} />
     </div>
 );
 

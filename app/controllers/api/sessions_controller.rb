@@ -5,7 +5,7 @@ class Api::SessionsController < ApplicationController
       login(@user)
       render json: @user
     else
-      flash[:errors] = ['these are errors']
+      render json: ['these are errors'], status: 404
     end
 
   end

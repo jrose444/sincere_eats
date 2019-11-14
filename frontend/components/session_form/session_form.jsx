@@ -21,10 +21,8 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user).then(
-            this.props.closeModal()
-        )
-    }
+        this.props.processForm(user).then(this.props.closeModal)
+        }
 
     renderErrors() {
         return (
@@ -40,34 +38,38 @@ class SessionForm extends React.Component {
     render() {
         // debugger
         const display = (this.props.formType === "signup") ? (
-        <label>Email:
+        <label>
               <input type="text"
+                placeholder="Email"
                 value={this.state.email}
                 onChange={this.update('email')}
                 className="login-input"
             />
+            <br/>
         </label>) :
         ""
         
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Welcome to Sincere Eats!
+                    <div className="welcome">Welcome to Sincere Eats!</div> 
           <br />
-                    Please {this.props.formType} or {this.props.navLink}
+                    <div className='welcome'>Please {this.props.formType}</div> 
                     {this.renderErrors()}
                     <div className="login-form">
                         <br />
-                        <label>Username:
+                        <label>
               <input type="text"
+                                placeholder="Username"
                                 value={this.state.username}
                                 onChange={this.update('username')}
                                 className="login-input"
                             />
                         </label>
                         <br />
-                        <label>Password:
+                        <label>
               <input type="password"
+                                placeholder="Password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
                                 className="login-input"
