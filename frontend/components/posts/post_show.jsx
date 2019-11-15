@@ -32,7 +32,6 @@ class PostsShow extends React.Component {
                 <br/>
                 <div>{this.props.post.directions}</div>
             <br/>
-            <Link to="/">Posts</Link>
         </div> 
         )
 

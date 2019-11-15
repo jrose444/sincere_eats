@@ -1,3 +1,16 @@
 // Place all the styles related to the api/posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post-index-item{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.post-item-link{
+    text-decoration: none;
+    color: black
+}
+
+.title{
+    font-weight: bold;
+}

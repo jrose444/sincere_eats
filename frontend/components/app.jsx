@@ -18,9 +18,13 @@ import PostShowContainer from './posts/post_show_container'
 const App = () => (
     <div>
         <header className="the-navbar">
-        <h1 className="title">Sincere Eats
+            <div className="title-and-image">
+                <Link className="main-link" to="/">Posts>
+        <h1 className="title">Sincere Eats>
         <img className="rest-image" src="/assets/restaurant.png"/>
         </h1>
+                </Link>
+            </div>
             <div className="nav-bar-fields">
                 <div className="dropdown">
                 <h3 className="recipes-tab">Recipes
