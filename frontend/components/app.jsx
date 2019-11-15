@@ -21,7 +21,7 @@ const App = () => (
             <div className="title-and-image">
                 <Link className="main-link" to="/">Posts>
         <h1 className="title">Sincere Eats>
-        <img className="rest-image" src="/assets/restaurant.png"/>
+        <img className="rest-image" src="/restaurant.png"/>
         </h1>
                 </Link>
             </div>
