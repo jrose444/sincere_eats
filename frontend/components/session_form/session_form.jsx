@@ -10,12 +10,19 @@ class SessionForm extends React.Component {
             email: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleDemoUser = this.handleDemoUser.bind(this)
     }
 
     update(field) {
         return e => this.setState({
             [field]: e.currentTarget.value
         })
+    }
+
+    handleDemoUser() {
+        let user = {username: 'Brunna',
+        password: 'brunna123'}
+    this.props.processForm(user).then(this.props.closeModal)
     }
 
     handleSubmit(e) {
@@ -36,7 +43,6 @@ class SessionForm extends React.Component {
         );
     }
     render() {
-        // debugger
         const display = (this.props.formType === "signup") ? (
         <label>
               <input type="text"
@@ -78,7 +84,10 @@ class SessionForm extends React.Component {
                         <br />
                         {display}
                         <br />
-                        <input className="session-submit" type="submit" value={this.props.formType} />                        
+                        <input className="session-submit" type="submit" value={this.props.formType} />  
+                        <div>
+        {(this.props.formType === "login") ? <button onClick={this.handleDemoUser}>Demo User</button> : "" }  
+                        </div>                      
                     </div>
                 </form>
             </div>

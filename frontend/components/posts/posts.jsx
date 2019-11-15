@@ -10,7 +10,6 @@ class Posts extends React.Component {
     }
 
     componentDidMount(){
-        // debugger
         this.props.banana()
     }
 
@@ -21,7 +20,6 @@ class Posts extends React.Component {
     }
 
     render(){
-        // debugger
 
         let posts = <div className='mappedPosts'>
         

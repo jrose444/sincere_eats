@@ -2,9 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const PostIndexItem = ({ post }) => (
-    <li className="post-index-item">
-        <div> <Link to={`/posts/${post.id}`}>{post.title}</Link> </div>
-    </li>
+    <div className="post-index-item">
+        <img className='photo' src={`${post.photoUrl}`}/> 
+        <div className='title'> <Link to={`/posts/${post.id}`}>{post.title}</Link> </div>
+        <div className='tag'>{post.tagline}</div>
+        
+    </div>
 );
 
 export default PostIndexItem;

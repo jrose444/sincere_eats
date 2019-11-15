@@ -7,7 +7,6 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 import {withRouter} from 'react-router-dom'
 
 const mapStateToProps = ({ errors }) => {
-    debugger;
     return {
         errors: errors.session,
         formType: 'login',

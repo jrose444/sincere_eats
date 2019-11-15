@@ -4,7 +4,6 @@ import PostShow from './post_show'
 
 
 const mapStateToProps = (state, ownProps) => {
-    debugger
     return {
         post: state.entities.posts[ownProps.match.params.mango],
         id: ownProps.match.params.mango

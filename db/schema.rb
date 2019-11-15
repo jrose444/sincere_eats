@@ -38,7 +38,10 @@ ActiveRecord::Schema.define(version: 2019_11_11_215222) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title", null: false
-    t.string "body"
+    t.string "tagline"
+    t.text "body"
+    t.text "ingredients"
+    t.text "directions"
     t.integer "author_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

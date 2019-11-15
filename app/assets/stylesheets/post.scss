@@ -1,17 +1,62 @@
 .mappedPosts{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    border: 1px;
+    margin-top: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 12px;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // justify-content: space-evenly;
 }
 
-.singlePost{
-    padding: 20px;
-    border: 3px solid black;
-    margin: 20px;
+// .singlePost{
+//     padding: 20px;
+//     border: 3px solid black;
+//     margin: 20px;
+// }
+
+// .post-index-item{
+//     width: 25%;
+//     height: 400px;
+// }
+// .post-index-item{
+//     size: 25%;
+// }
+
+.post-index-item{
+    background-color: white;
 }
 
-.burger-photo{
-    width: 300px;
-    height: 100%;
+.photo{
+    height: 225px;
+    width: 345px;
+    // border: 1px;
+    // padding: 15px;
+    // margin: 15px;
+}
+
+.title{
+    display: block;
+    background-color: white;
+    // border-left: 1px;
+    // border-right: 1px;
+    // padding-right: 15px;
+    // padding-left: 15px;
+    margin: 25px;
+    
+}
+
+.tag{
+    display: block;
+    background-color: white;    
+    font-style: none;
+    // border-left: 1px;
+    // border-right: 1px;
+    // padding-left: 25px;
+    // padding-right: 25px;
+    margin: 25px;
+    
 }
