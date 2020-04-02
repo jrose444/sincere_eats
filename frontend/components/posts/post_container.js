@@ -1,4 +1,4 @@
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 import Posts from './posts'
 import { fetchPosts } from '../../actions/post_actions'
 
