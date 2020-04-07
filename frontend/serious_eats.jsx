@@ -3,7 +3,8 @@ import Root from './components/root'
 import ReactDOM from "react-dom";
 // import { signup, login, logout } from './util/session_api_util';
 import {signup, login, logout} from './actions/session_actions'
-import {fetchpost, fetchposts} from './actions/post_actions'
+import {fetchpost, fetchPosts} from './actions/post_actions'
+import {fetchComments, addComment} from './actions/comment_actions'
 import configureStore from './store/store'
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -29,8 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // window.logout = logout;
     // window.getState = store.getState;
     window.dispatch = store.dispatch; 
-    // window.fetchPosts = fetchposts;
+    window.fetchPosts = fetchPosts;
     window.fetchpost = fetchpost
+    window.fetchComments = fetchComments
+    window.addComment = addComment
 
     ReactDOM.render(<Root store = {store} />, root);
 });
