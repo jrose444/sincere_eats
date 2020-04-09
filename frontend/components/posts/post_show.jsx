@@ -1,4 +1,5 @@
 import React from 'react'
+import CommentIndexItem from '../comments/commment_index_item'
 import { Link } from 'react-router-dom';
 
 
@@ -10,7 +11,7 @@ class PostsShow extends React.Component {
 
     componentDidMount(){
         this.props.fetchpost(this.props.id)
-        this.props.fetchPosts()
+        // this.props.fetchPosts()
         this.props.fetchComments(this.props.id)
     }
 
@@ -18,8 +19,11 @@ class PostsShow extends React.Component {
 
     render(){
         if (!this.props.post) return null;
-        const comments = Object.values(this.props.comments)
-        console.log(this.props.post)
+        let comments = Object.values(this.props.comments);
+        comments = comments.map((comment) => ( 
+            <CommentIndexItem key={comment.id}
+            className="singleComment"
+            comment={comment} />))
         debugger;
         return (
         <div>  
@@ -37,8 +41,7 @@ class PostsShow extends React.Component {
                 <br/>
                 <div>{this.props.post.directions}</div>
                 <br />
-                <div>
-                {comments.map((comment)=> {comment.body})}</div>
+                <div>{comments}</div>
             <br/>
         </div> 
         )
