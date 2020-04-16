@@ -1,7 +1,6 @@
 import React from 'react';
 
 
-debugger;
 const CommentIndexItem = ({ comment }) => (
         <div className="comment-index-item">
             <div className='body'>{comment.body} </div>

@@ -1,8 +1,9 @@
-export const makeComment = (comment) => {
+export const makeComment = comment => {
+    // debugger;
     return $.ajax({
-        url: `/api/posts/${comment.post_id}/comments`,
+        url: `/api/posts/${comment.postId}/comments`,
         method: 'POST',
-        data: { comment }
+        data: comment
     });
 };
 

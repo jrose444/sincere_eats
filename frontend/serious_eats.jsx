@@ -6,6 +6,7 @@ import {signup, login, logout} from './actions/session_actions'
 import {fetchpost, fetchPosts} from './actions/post_actions'
 import {fetchComments, addComment} from './actions/comment_actions'
 import configureStore from './store/store'
+import {makeComment} from './util/comment_util'
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
@@ -24,16 +25,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     window.current_user
     // window.getState = store.getState;
-    // window.dispatch = store.dispatch;
+    window.dispatch = store.dispatch;
     // window.login = login;
     // window.signup = signup;
     // window.logout = logout;
     // window.getState = store.getState;
-    window.dispatch = store.dispatch; 
-    window.fetchPosts = fetchPosts;
-    window.fetchpost = fetchpost
+    // window.dispatch = store.dispatch; 
+    // window.fetchPosts = fetchPosts;
+    // window.fetchpost = fetchpost
     window.fetchComments = fetchComments
     window.addComment = addComment
+    window.makeComment = makeComment
 
     ReactDOM.render(<Root store = {store} />, root);
 });

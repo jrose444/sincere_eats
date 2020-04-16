@@ -12,7 +12,6 @@ export const receiveComment = comment => ({
     type: RECEIVE_COMMENT,
     comment
 })
-
 export const fetchComments = postId => dispatch => (commentUtil.fetchComments(postId)
 .then(comments => dispatch(receiveComments(comments)))
 )
