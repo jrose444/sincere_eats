@@ -10,6 +10,8 @@ class User < ApplicationRecord
   foreign_key: :author_id,
   class_name: :Post
 
+  has_many :likes
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     user && user.is_password?(password) ? user : nil
