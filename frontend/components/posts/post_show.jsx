@@ -2,6 +2,7 @@ import React from 'react'
 import CommentIndexItem from '../comments/commment_index_item'
 import { Link } from 'react-router-dom';
 import Comment from '../comments/comment_form'
+import Likes from '../likes/like'
 
 
 class PostsShow extends React.Component {
@@ -14,6 +15,7 @@ class PostsShow extends React.Component {
         this.props.fetchpost(this.props.id)
         // this.props.fetchPosts()
         this.props.fetchComments(this.props.id)
+        this.props.fetchPostLikes(this.props.id, 'Post')
     }
 
     
@@ -23,11 +25,13 @@ class PostsShow extends React.Component {
         const currentUser = this.props.currentUser
 
         let comments = Object.values(this.props.comments);
-        debugger;
         comments = comments.map((comment) => ( 
             <CommentIndexItem key={comment.id}
             className="singleComment"
-            comment={comment} />))
+            comment={comment}
+            commentLikes={this.props.fetchPostLikes}
+            addPostLike={this.props.addPostLike}
+            removePostLike={this.props.removePostLike} />))
         return (
         <div>  
             
@@ -44,12 +48,22 @@ class PostsShow extends React.Component {
                 <br/>
                 <div>{this.props.post.directions}</div>
                 <br />
-                <div>{comments}</div>
+                {/* <div>{comments}</div> */}
+                <div><Likes 
+                    postId={this.props.id}
+                    addPostLike={this.props.addPostLike}
+                    removePostLike={this.props.removePostLike}
+                    fetchPostLikes={this.props.fetchPostLikes}
+                    currentUser={currentUser}
+                    likes={Object.values(this.props.likes)}
+                /></div>
+                {/* <div>post like: {Object.values(this.props.likes).map(like => like.id)}</div> */}
                 <div><Comment
                 postId = {this.props.id}
                 currentUser ={currentUser}
                 addComment = {this.props.addComment}
                 fetchComments = {this.props.fetchComments}
+                
                 /></div>
             <br/>
         </div> 
