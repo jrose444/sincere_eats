@@ -45,6 +45,7 @@ class PostsShow extends React.Component {
                 <div>{this.props.post.body}</div>
                 <br/>
                 <div>{this.props.post.ingredients}</div>
+                
                 <br/>
                 <div>{this.props.post.directions}</div>
                 <br />

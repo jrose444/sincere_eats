@@ -1,6 +1,7 @@
 import React from 'react';
 import {withRouter} from 'react-router';
 import PostIndexItem from './post_index_item';
+import FeaturedPostIndexItem from './featured_post_index_item'
 import { ProtectedRoute } from '../../util/route_util';
 import PostShowContainer from './post_show_container';
 
@@ -20,14 +21,30 @@ class Posts extends React.Component {
     }
 
     render(){
+        let postArray = Object.values(this.props.posts)
+        postArray.push(...postArray)
+        console.log(postArray)
 
         let posts = <div className='mappedPosts'>
         
-        
-        {Object.values(this.props.posts).map
+        {postArray.map
                 (post => <PostIndexItem key={post.id}
                     className="singlePost" post={post} />)}
                 </div>
+
+        let featuredPosts1 = <div className='featured-posts-1'>
+
+            {Object.values(this.props.posts).slice(0, 1).map
+                ((post, i) => <FeaturedPostIndexItem key={post.id}
+                    className='featuredSinglePosts1' post={post} i={i} />)}
+        </div>
+
+        let featuredPosts23 = <div className='featured-posts-23'>
+
+            {Object.values(this.props.posts).slice(1,3).map
+                ((post, i) => <FeaturedPostIndexItem key={post.id}
+                    className='featuredSinglePosts12' post={post} i={i} />)}
+        </div>
             // mapping over array and creating <PostIndexItem post={post}/> for each post 
 
             // <img className="burger-photo"
@@ -35,7 +52,12 @@ class Posts extends React.Component {
 
         return(
             <div>
-                {posts}
+                <div className='featured-posts'>
+                    <div className='featured-posts-1'>{featuredPosts1}</div>
+                    <div className='featured-posts-23'>{featuredPosts23}</div>
+                </div>
+                <div>{posts}</div>
+                
             </div>
         )
     }

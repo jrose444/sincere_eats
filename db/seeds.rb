@@ -30,7 +30,9 @@ body: 'Chicken adobo is a classic dish in the cuisine of the Philippines, one th
 
 Why It Works
 Browning the chicken and deglazing the pot with water add an extra layer of savory flavor to both the meat and the sauce.
-Blooming the garlic, peppercorns, and bay leaves in the rendered chicken fat releases their aromatic oils into the sauce.', ingredients: '1 tablespoon (15ml) canola oil or other neutral oil
+Blooming the garlic, peppercorns, and bay leaves in the rendered chicken fat releases their aromatic oils into the sauce.', 
+
+ingredients: '1 tablespoon (15ml) canola oil or other neutral oil
 4 bone-in, skin-on chicken legs, separated into thighs and drumsticks (about 2 1/2 pounds; 1.15kg)
 Kosher salt
 8 garlic cloves, thinly sliced

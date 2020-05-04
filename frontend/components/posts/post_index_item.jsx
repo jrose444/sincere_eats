@@ -5,7 +5,7 @@ const PostIndexItem = ({ post }) => (
     <Link className="post-item-link" to={`/posts/${post.id}`}>
     <div className="post-index-item">
         <img className='photo' src={`${post.photoUrl}`}/> 
-        <div className='title'>{post.title} </div>
+        <div className='post-index-title'>{post.title} </div>
         <div className='tag'>{post.tagline}</div>
         
     </div>

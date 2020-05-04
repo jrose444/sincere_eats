@@ -19,8 +19,8 @@ const App = () => (
     <div>
         <header className="the-navbar">
             <div className="title-and-image">
-                <Link className="main-link" to="/">Posts>
-        <h1 className="title">Sincere Eats>
+                <Link className="main-link" to="/">
+        <h1 className="title">Sincere Eats
         <img className="rest-image" src="/restaurant.png"/>
         </h1>
                 </Link>
