@@ -21,13 +21,14 @@ class Posts extends React.Component {
     }
 
     render(){
-        let postArray = Object.values(this.props.posts)
-        postArray.push(...postArray)
-        console.log(postArray)
-
+        // let postArray = Object.values(this.props.posts)
+        debugger;
+        console.log(this.props.posts)
+        let postsArray = Object.values(this.props.posts)
+        console.log(Object.values(this.props.posts))
         let posts = <div className='mappedPosts'>
         
-        {postArray.map
+        {postsArray.map
                 (post => <PostIndexItem key={post.id}
                     className="singlePost" post={post} />)}
                 </div>

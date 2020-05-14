@@ -4,9 +4,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.string :title, null: false
       t.string :tagline
       t.text :body
-      t.text :ingredients
-      t.text :directions
-      t.integer :author_id, null: false
+      t.string :author_name, null: false
 
       t.timestamps
     end

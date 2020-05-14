@@ -8,9 +8,9 @@ import Likes from '../likes/like'
 class PostsShow extends React.Component {
     constructor(props) {
         super(props);
-        console.log(this.props)
+        // console.log(this.props)
     }
-
+    
     componentDidMount(){
         this.props.fetchpost(this.props.id)
         // this.props.fetchPosts()
@@ -24,7 +24,14 @@ class PostsShow extends React.Component {
         if (!this.props.post) return null;
         const currentUser = this.props.currentUser
 
+        
         let comments = Object.values(this.props.comments);
+        let directions = Object.values(this.props.post.directions).map((el) => (
+            <div className='single-direction'>{el.body}</div>
+        ));
+        let ingredients = Object.values(this.props.post.ingredients).map((el) => (
+            <div className='single-ingredient'>{el.body}</div>
+        ));
         comments = comments.map((comment) => ( 
             <CommentIndexItem key={comment.id}
             className="singleComment"
@@ -33,23 +40,23 @@ class PostsShow extends React.Component {
             addPostLike={this.props.addPostLike}
             removePostLike={this.props.removePostLike} />))
         return (
-        <div>  
-            
-                <h1>{this.props.post.title}</h1>
-                <br/>
-                <br/>
-                <div>{this.props.post.tagline}</div>
-                <br/>
-                <img className="show-image" src={`${this.props.post.photoUrl}`} alt=""/>
-                <br/>
-                <div>{this.props.post.body}</div>
-                <br/>
-                <div>{this.props.post.ingredients}</div>
+        <div className='post-show-container'>  
+            <div className='mmpost-body-container'>
+                <div className='post-show-title'>{this.props.post.title}</div>
+                <div className='post-show-author'>J. Kenji Lopez-Alt</div>
+                <div className='post-show-tagline'>{this.props.post.tagline}</div>
+
+                <img className="post-show-image" src={`${this.props.post.photoUrl}`} alt=""/>
+
+                {/* <div>{this.props.post.body}</div> */}
                 
-                <br/>
-                <div>{this.props.post.directions}</div>
+                <div className='ingredients-and-directions'>
+                    <div className='ingredient-container'>{ingredients}</div>
+                    <div className='direction-container'>{directions}</div>
+                </div>
+            </div>
                 <br />
-                {/* <div>{comments}</div> */}
+                <div>{comments}</div>
                 <div><Likes 
                     postId={this.props.id}
                     addPostLike={this.props.addPostLike}

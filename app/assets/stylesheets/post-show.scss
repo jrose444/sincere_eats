@@ -1,0 +1,47 @@
+.post-show-container{
+    background-color: white;
+    margin-left: 35px;
+    margin-top: 30px;
+    width: 63%;
+}
+
+.post-show-image{
+    width: 100%
+}
+
+.post-show-title{
+    font-weight: bold;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+
+}
+
+.post-show-author{
+    font-size: 14px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.post-show-tagline{
+    font-style: italic;
+    font-size: 18px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.ingredients-and-directions{
+    display: flex;
+}
+
+.ingredient-container{
+//    position: absolute;
+   width: 30%; 
+}
+.direction-container{
+    // position: absolute;
+}

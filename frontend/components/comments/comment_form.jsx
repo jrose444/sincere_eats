@@ -12,9 +12,11 @@ class Comment extends React.Component {
     }
 
     handleInput() {
+        debugger;
         return e => (this.setState({ body: e.target.value }));
     }
     handleSubmit(e) {
+        debugger;
         e.preventDefault()
         const comment = Object.assign({}, { comment: this.state })
         this.props.addComment(comment).then(() => {

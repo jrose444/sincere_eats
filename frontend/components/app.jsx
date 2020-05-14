@@ -15,6 +15,7 @@ import {
 import PostContainer from './posts/post_container'
 import PostShowContainer from './posts/post_show_container'
 
+
 const App = () => (
     <div>
         <header className="the-navbar">
