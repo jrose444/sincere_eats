@@ -1,0 +1,17 @@
+-Change Like Button and move like button ----- donzoe
+
+-Add some sort of side bar with post items to post show
+    -ok let's go,
+    -post show page fetchposts
+    -create post show index item
+        --im right here, and i feel like getting up, i justneed to put it in the right side of the flex box, I think I'm concerned because I'm concerned that I structured a bunch of things wrong which I will either need to fix or is going to make this very hard
+    -put them on thte other side of the flex box
+    -make them scroll with the page
+-style drop downs
+-style modal
+-seed database
+-Fix Comment Sizing
+-implement search
+-heroku push
+-delete comments
+-add comment likes

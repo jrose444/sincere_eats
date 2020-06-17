@@ -1,0 +1,30 @@
+.all-side-posts{
+    position: fixed;
+    right: 100px;
+    top: 70px;
+}
+
+.post-show-item-link{
+    text-decoration: none;
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+}
+
+.post-show-index-item{
+    display: flex;
+}
+
+.post-show-photo{
+    width: 100px;
+}
+
+.post-show-index-title{
+    background: white;
+    width: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    text-decoration: none;
+    // font-style: normal;
+}
+

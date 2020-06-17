@@ -10,13 +10,13 @@ class Likes extends React.Component {
             likes: likeCount,
             updated: false
         }
-        this.updateLikes = this.updateLikes.bind(this);
-        
+        this.updateLikes = this.updateLikes.bind(this);    
     }
     
     componentDidMount() {
+        if (!this.props.likes) return null;
+
         const likeCount = Object.keys(this.props.likes).length;
-        debugger;
         this.props.fetchPostLikes(this.props.postId, 'Post')
             .then(
                 this.likeHash[this.props.currentUser.id] ?
@@ -54,19 +54,17 @@ class Likes extends React.Component {
     }
 
     render() {
-        // let likeIcon = this.state.updated ?
-        //     <img onClick={this.updateLikes} src="/002-like.png" />
-        //     : <img onClick={this.updateLikes} src="/001-like-1.png" />
-        <button onClick={this.updateLikes}>like or unlike button</button>
+        let likeIcon = this.state.updated ?
+            <img className='like-icon' onClick={this.updateLikes} src="/like.png" />
+            : <img className='like-icon' onClick={this.updateLikes} src="/neutral_like.png" />
+        // <button onClick={this.updateLikes}>like or unlike button</button>
 
 
         if (!this.props.likes) return null;
         return (
             <div className="likes-div">
-                <button onClick={this.updateLikes}>like or unlike button</button>
-
-                {/* {likeIcon} */}
-                {console.log(this.state)}
+                {/* <button onClick={this.updateLikes}>like or unlike button</button> */}
+                <div className='like-icon'>{likeIcon}</div>
                 <p>liked by {this.state.likes} others</p>
             </div>
         )

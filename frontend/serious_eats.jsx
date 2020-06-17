@@ -37,10 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // window.fetchComments = fetchComments
     // window.addComment = addComment
     // window.makeComment = makeComment
-    window.fetchPostLikes = fetchPostLikes
+    // window.fetchPostLikes = fetchPostLikes
     // window.fetchUserLike = fetchUserLike
-    window.addPostLike = addPostLike
-    window.removePostLike = removePostLike
+    // window.addPostLike = addPostLike
+    // window.removePostLike = removePostLike
 
 
     ReactDOM.render(<Root store = {store} />, root);

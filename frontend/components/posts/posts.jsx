@@ -22,10 +22,7 @@ class Posts extends React.Component {
 
     render(){
         // let postArray = Object.values(this.props.posts)
-        debugger;
-        console.log(this.props.posts)
         let postsArray = Object.values(this.props.posts)
-        console.log(Object.values(this.props.posts))
         let posts = <div className='mappedPosts'>
         
         {postsArray.map

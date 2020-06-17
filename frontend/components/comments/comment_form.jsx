@@ -12,11 +12,9 @@ class Comment extends React.Component {
     }
 
     handleInput() {
-        debugger;
         return e => (this.setState({ body: e.target.value }));
     }
     handleSubmit(e) {
-        debugger;
         e.preventDefault()
         const comment = Object.assign({}, { comment: this.state })
         this.props.addComment(comment).then(() => {
@@ -27,10 +25,10 @@ class Comment extends React.Component {
     render() {
         return (
             <div>
-    //             <form onSubmit={this.handleSubmit} >
-    //                 <input id={`comment-input-${this.props.postId}`} type="text" placeholder="Add a comment..." onChange={this.handleInput()} />
-    //                 <input type="submit" value="Post" />
-    //             </form>
+                 <form className='comment-form' onSubmit={this.handleSubmit} >
+                    <input className='comment-input' id={`comment-input-${this.props.postId}`} type="text" placeholder="Add a comment..." onChange={this.handleInput()} />
+                    <input className='comment-submit' type="submit" value="Post" />
+                 </form>
             </div>
         )
     }
